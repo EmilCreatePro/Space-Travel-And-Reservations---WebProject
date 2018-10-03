@@ -1,6 +1,6 @@
 # Space-Travel-And-Reservations---WebProject
 
-## Authors: *Chirila && Codila*
+## Authors: *Chirila and Codila*
 
 A complex site using javascript and node.js.
 
@@ -9,6 +9,7 @@ You can found this site [here](http://wait.com/).
 
 
 ###### What we are planning to achieve with this site:
+- [x] Having the source public on Github
 - [ ] Be able to make reservations to go to other planets
 - [ ] The ability to choose between 2-3 hotels on each planet
 - [ ] Having the opportunity to leave comment and feedback for trip
