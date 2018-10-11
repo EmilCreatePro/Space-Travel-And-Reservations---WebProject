@@ -1,0 +1,75 @@
+PLANETE   Nume
+1        Marte
+2        Luna
+3        Pluto
+4        Venus
+5        Pamant
+
+
+CALATORII
+
+id Plecare Destinatia OraP OraS NrLocuri
+10   1         4
+20
+30
+40
+
+
+
+
+
+
+
+
+Hoteluri
+
+id Nume Planeta NrStele NrCamere(4 locuri per camera)
+6           3                5
+
+
+
+
+
+Rezervari:
+
+id DataIN DataOut idCamera
+1   e       g       62
+2   i       k       62
+
+
+Camere
+
+id   NrCamera   idHotel(optional)
+1
+2      62          6
+3
+4
+
+
+
+
+
+Client
+id nume mail nrTelefon nrCard cnp idCalatorie idCamera
+1
+2                                      20        62  (idHotel - nrCamera)
+3
+4
+5
+
+
+
+
+
+Pamant - Luna 2/zi
+Pamant - Pluto 1/zi
+Pamant - Marte 2/zi
+Pamant - Venus 1/zi
+
+
+
+
+
+
+
+Daca se cazeaza un numar de persoane mai mare de nr max de locuri per camera?:))

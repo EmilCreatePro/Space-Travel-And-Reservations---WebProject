@@ -1,0 +1,117 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,700i|Roboto:300,300i,400,400i,500,700,900'); 
+/* IMPORTS THE FONT FOR 'SPACE EXPLORER' AND THE TEXT THAT FADES FORM LEFT TO RIGHT
+
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+
+h1, h3 {
+  color: #121212;
+  font-weight: 600;
+  margin-top:0px;
+  font-family: 'Roboto', sans-serif;
+}/* Font style(thickness of the letters) for the main page*/
+
+a:hover {
+  color: #0084ff;
+  text-decoration: none;
+}
+
+#scrollUp {
+	background: #333 none repeat scroll 0 0;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	bottom: 30px;
+	color: #fff;
+	font-size: 14px;
+	height: 45px;
+	line-height: 44px;
+	position: absolute;
+	right: 30px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	width: 45px;
+}
+#scrollUp:hover{
+	background:#0066ff;
+}/* these two from above are for a button that gets you back to the top of the page */
+
+.hero-wrapper:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #7ad5ff;
+  content: "";
+  opacity: .6;
+}
+
+.ptb-100{padding:50px 0px 100px;}
+.hero-wrapper {
+	background-image: url("img/bg-image.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+}
+
+.hero-content {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}/* PUTS THE IMAGE IN THE BACKGROUND AND SETS SOME PARAMETERS IN IT*/
+
+
+.table{
+	display:table;
+	height:100%;
+}
+
+.table-cell{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.hero-content > h1 {
+  color: #ffffff;
+  font-size: 60px;
+  margin-bottom: 36px;
+}
+
+.table-cell h1 {
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.hero-content h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero-content a {
+	background: #ffffff none repeat scroll 0 0;
+	border: medium none;
+	color: #121212;
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 20px;
+	padding: 12px 45px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+}
+
+.hero-content a:hover {
+  background: #008cfff5;
+  color: #fff;
+} /*THESE two are for the button that says go now */

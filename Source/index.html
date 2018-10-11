@@ -1,36 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Byte Size</title>
-  <link rel="stylesheet" type="text/css" href="public/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Space Explorer</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="Tab icon" type="image/png" href="img/icon.png"> <!-- De aici se ia imaginea de sus din tab -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- aliniaza textul si butonul la mijlocul paginii-->
+
+	<link rel="stylesheet" href="css/cssanimation.min.css"> <!--animeaza textul de la stanga la dreapta plus efectul de lasare in jos a titlului -->
+
+	<link rel="stylesheet" href="style.css"> <!--CSS-ul prinicpal -> el ne da backgroundul si culorile, fontul si butonul -->
+
 </head>
-
 <body>
-  <header>
-    <img src="https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/bytesize_logo.svg" class="logo" />
-
-  </header>
-  <main id="main">
-    <div class="container">
-
-      <h1>Enter a URL</h1>
-
-      <form id="form" autocomplete="off">
-        <input type="text" id="input" value="">
-        <button id="shorten">Shorten</button>
-      </form>
-
-      <div id="responseField">
-
-      </div>
-
+	<!--Start Preloader-->
+    <div class="preloader-wrap">
+        <div class="spinner"></div>
     </div>
-  </main>
-  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-  <script src="public/main.js"></script>
-  <script src="public/helperFunctions.js"></script>
+	<!-- Hero
+	============================================ -->
+	<div class="hero-wrapper text-center ">
+		<div class="hero-wrapper-text">
+			<div class="hero-content">
+				<div class="table">
+					<div class="table-cell">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12">
+									<h1 class="cssanimation effect3d">Space Explorer</h1>
+									<h3 class="cssanimation leFadeInLeft sequence">Explore it like never before!</h3>
+									<!-- <p><span>Home Page</span>/<span>Blog Pages</span></p>		-->	
+									<a href="enterPage.html"> GO NOW</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</div>
+	
+	`
+
+<script src="js/letteranimation.js"></script> <!-- ajuta la animarea literelor-->
+
+
 </body>
 </html>
