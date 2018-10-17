@@ -45,9 +45,9 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background: #7ad5ff;
+  background: #030405;
   content: "";
-  opacity: .6;
+  opacity: .7;
 }
 
 .ptb-100{padding:50px 0px 100px;}

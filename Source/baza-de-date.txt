@@ -1,4 +1,5 @@
-PLANETE   Nume
+PLANETE   
+id       Nume
 1        Marte
 2        Luna
 3        Pluto
