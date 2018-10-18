@@ -8,6 +8,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
   <link rel="Tab icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,19 +17,32 @@
       <div id="logo" >
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html">Space<span class="logo_colour"> Explorer</span></a></h1>
-          <h2>EXPLORE IT LIKE NEVER BEFORE!</h2>
+          <h1><span class="logo_colour">Space Explorer</span></h1>
+          <h2><span class="subtext">EXPLORE IT LIKE NEVER BEFORE!</span></h2>
         </div>
       </div>
       <div id="menubar">
+          
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="examples.html">Examples</a></li>
-          <li><a href="page.html">A Page</a></li>
+          <li>
+            <button class="btn">
+                
+              <a href="index.html"><i class="fa fa-home"></i> </a>
+          </button></li>
+          <li><a href="enterPage.html">Home</a></li>
+          <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
+                <div class="dropdown-content">
+                  <a href="#">Full Package</a>
+                  <a href="#">Space Ship Only</a>
+                  <a href="#">Another Tab</a>
+                </div>
+          </li>
+          <!-- <li><a href="page.html">Rezervations</a></li> -->
           <li><a href="contact.html">Fun Facts</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="contact.html">About Us</a></li>
+          <li><a href="login.html">LogIn</a></li>
         </ul>
       </div>
     </div>
