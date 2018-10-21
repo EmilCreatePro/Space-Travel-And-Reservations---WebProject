@@ -13,6 +13,28 @@ h1, h3 {
   font-family: 'Roboto', sans-serif;
 }/* Font style(thickness of the letters) for the main page*/
 
+.goNowButton
+{
+	background: #ffffff none repeat scroll 0 0;
+	border: medium none;
+	color: #121212;
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 20px;
+	padding: 12px 45px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+}
+
+.goNowButton:hover
+{
+	background-color: #0084ff;
+	color: #ffffff;
+  text-decoration: none;
+}
+
 a:hover {
   color: #0084ff;
   text-decoration: none;

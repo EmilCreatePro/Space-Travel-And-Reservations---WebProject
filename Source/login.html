@@ -150,6 +150,7 @@
 				<input type="text" placeholder="User" name="userid"><br>
 				<input type="password" placeholder="Password" name="pswrd"><br>
 				<input type="button" onclick="check(this.form)" value="Login"/>
+				<input type="button" onclick="exitLogIn()" value="Exit"/>
 		</div>
 
 
@@ -158,26 +159,38 @@
 <script language="javascript">
 function check(form)
 {
- 
+ localStorage.lastname = "loggedOut";
  if((form.userid.value == "EmilChirila" && form.pswrd.value == "12345") || (form.userid.value == "OvidiuCodila" && form.pswrd.value == "12345"))
   {
-	alert("Welcome " + form.userid.value + "!");  
-    //window.open('file:///C:/Users/Emil/Desktop/Source/index.html')
-	setTimeout(function(){ //this will make the execution of the program to wait and after ok is clicked you will be redirected to home!
-    console.log('after');
-	},100);
-	//$(document). ready(function() {
-    //alert("Welcome " + form.userid.value + "!");
-    // code here is executed after the `alert` dialog was dismissed
-	window.location.href = 'file:///C:/Users/Emil/Desktop/Source/index.html';
-	//window.open('file:///C:/Users/Emil/Desktop/Source/index.html');
-//});
+	localStorage.lastname = form.userid.value;//we pass on the user input given
+	window.location.href = 'index.html';//we go back to the main page
   }
  else
  {
    alert("Incorrect UserName or Password!")
+   localStorage.lastname = "loggedOut";
   }
 }
+
+function exitLogIn(form)
+{
+	window.history.back();
+}
 </script>
+
+<div id="notes">
+</div>
+
+<script>
+if(typeof(Storage)!=="undefined")
+  {
+  document.getElementById("notes").innerHTML="Last name: " + localStorage.lastname;
+  }
+else
+  {
+  document.getElementById("notes").innerHTML="Sorry, your browser does not support web storage...";
+  }
+</script>
+
 </body>
 </html>

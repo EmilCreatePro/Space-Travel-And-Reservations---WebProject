@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!--<link rel="stylesheet" href="reset.css"> <!--reseteaza pagina teoretic -->
+	<link rel="stylesheet" href="reset.css"> <!--reseteaza pagina teoretic -->
 
 	<link rel="Tab icon" type="image/png" href="img/icon.png"> <!-- De aici se ia imaginea de sus din tab -->
 
@@ -17,9 +17,10 @@
 	
 	
 	<link rel="stylesheet" href="style.css"> <!--CSS-ul prinicpal -> el ne da backgroundul si culorile, fontul si butonul -->
-
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!--include jQuery-->
 </head>
 <body>
+	<!--<script> localStorage.lastname = "loggedOut"; </script>-->
 	<!--Start Preloader-->
     <div class="preloader-wrap">
         <div class="spinner"></div>
@@ -36,8 +37,8 @@
 								<div class="col-xs-12">
 									<h1 class="cssanimation effect3d">Space Explorer</h1>
 									<h3 class="cssanimation leFadeInLeft sequence">Explore it like never before!</h3>
-									<!-- <p><span>Home Page</span>/<span>Blog Pages</span></p>		-->	
-									<a href="enterPage.html"> GO NOW</a>
+									<!--<a href="enterPage.html">GO NOW</a> -->
+									<button class="goNowButton" onclick="goEnterPage()" >GO NOW</button><!--define the button and what function is called when clicked-->
 								</div>
 							</div>
 						</div>
@@ -46,11 +47,25 @@
 			</div>				
 		</div>
 	</div>
-	
-	`
-
 <script src="js/letteranimation.js"></script> <!-- ajuta la animarea literelor-->
 
+<div id="notes">
+</div>
+
+<script language="javascript">
+function goEnterPage()
+	{
+		window.location.href = 'enterPage.html';
+		if(typeof(Storage)!=="undefined" && ((localStorage.lastname==="EmilChirila") || ((localStorage.lastname==="OvidiuCodila")))  )
+		{
+			alert("Welcome " + localStorage.lastname + "!");
+		}
+		else
+		{
+			//do nothing if you are logged out
+		}
+	}
+</script>	
 
 </body>
 </html>
