@@ -8,19 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="reset.css"> <!--reseteaza pagina teoretic -->
-
 	<link rel="Tab icon" type="image/png" href="img/icon.png"> <!-- De aici se ia imaginea de sus din tab -->
-
 	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- aliniaza textul si butonul la mijlocul paginii-->
-
 	<link rel="stylesheet" href="css/cssanimation.min.css"> <!--animeaza textul de la stanga la dreapta plus efectul de lasare in jos a titlului -->
-	
-	
+	<script src="js/letteranimation.js"></script> <!-- ajuta la animarea literelor-->
 	<link rel="stylesheet" href="style.css"> <!--CSS-ul prinicpal -> el ne da backgroundul si culorile, fontul si butonul -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!--include jQuery-->
+	<script src="js/indexOnLoadMessage.js"></script>
+
 </head>
 <body>
-	<!--<script> localStorage.lastname = "loggedOut"; </script>-->
 	<!--Start Preloader-->
     <div class="preloader-wrap">
         <div class="spinner"></div>
@@ -47,25 +44,9 @@
 			</div>				
 		</div>
 	</div>
-<script src="js/letteranimation.js"></script> <!-- ajuta la animarea literelor-->
 
 <div id="notes">
-</div>
-
-<script language="javascript">
-function goEnterPage()
-	{
-		window.location.href = 'enterPage.html';
-		if(typeof(Storage)!=="undefined" && ((localStorage.lastname==="EmilChirila") || ((localStorage.lastname==="OvidiuCodila")))  )
-		{
-			alert("Welcome " + localStorage.lastname + "!");
-		}
-		else
-		{
-			//do nothing if you are logged out
-		}
-	}
-</script>	
+</div>	
 
 </body>
 </html>

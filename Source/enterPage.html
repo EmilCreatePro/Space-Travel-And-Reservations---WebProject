@@ -3,16 +3,16 @@
 
 <head>
   <title>Space Explorer</title>
-  <script language="javascript" src="js/logOutButton.js"></script>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
   <link rel="Tab icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/logInOutMainButtons.js"></script>
 
   
 </head>
 
-<body>
+<body onload="checkLogIn()">
   <!-- <button class="logOutButton" onclick="logOut()" >Log Out</button>  -->
 
   <div id="main">
@@ -30,8 +30,8 @@
           <li>
             <button class="btn">
               <a href="index.html"><i class="fa fa-home"></i> </a>
-          </button></li>
-          <li class="selected"><a href="enterPage.html">Home</a></li>
+            </button></li>
+          <li><a href="enterPage.html">Home</a></li>
           <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
                 <div class="dropdown-content">
                   <a href="#">Full Package</a>
@@ -42,7 +42,8 @@
           <li><a href="funFacts.html">Fun Facts</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="login.html">LogIn</a></li>
+          <li class="logIn"><a href="login.html">LogIn</a></li>
+          <li class="logOut" onclick="logout()"><a href="#">LogOut</a></li>
         </ul>
       </div>
     </div>
@@ -88,35 +89,8 @@
           <li>Google Chrome 31</li>
         </ul>
       </div>
-    </div>
-    
+    </div> 
   </div>
-  
-<script language="javascript">//add logout button if necessary
-      if(typeof(Storage)!=="undefined" && ((localStorage.lastname==="EmilChirila") || ((localStorage.lastname==="OvidiuCodila")))  )
-		  {
-        //alert("LogOut button is being created!");
-        var btn = document.createElement("BUTTON"); //create button
-        var t = document.createTextNode("Log Out");//set the text of the button
-        btn.appendChild(t);//append to this button the text property
-        document.body.appendChild(btn);//append this button to the main body
-        btn.className = "logOutButton";//define the class of the button
-        btn.onclick = function() { //define what will happen if button is clicked
-          if (confirm("You will be Logged Out? Press OK if you want to continue")) 
-          {
-            localStorage.lastname="loggedOut";
-            window.location.href = 'index.html';
-          } 
-          else 
-          {
-            //do nothing if Cancel is pressed
-          }
-          //alert("Welcome " + localStorage.lastname + "!");
-        }
-
-        //alert("LogOut button created!");
-      }
-  </script>
 
 </body>
 </html>

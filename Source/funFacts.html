@@ -8,29 +8,15 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
   <link rel="Tab icon" type="image/png" href="img/icon.png">
-
-  <link rel="stylesheet" type="text/css" href="./weight_files/weight.css">
-
+  <link rel="stylesheet" type="text/css" href="styleMainPages/weight.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/logInOutMainButtons.js"></script>
+  <script src="js/weightCalculation.js"></script>
 
-  <!-- The script where the wait is computed -->
-  <script> 
-    function compute_weight(t)
-    {
-      var u=t.wt.value;
-      u>0&&(t.outputmrc.value=int_zero(10*u*.378)/10,t.outputvn.value=int_zero(10*u*.907)/10,t.outputmoon.value=int_zero(10*u*.166)/10,t.outputmars.value=int_zero(10*u*.377)/10,t.outputjp.value=int_zero(10*u*2.528)/10,t.outputsat.value=int_zero(10*u*1.064)/10,t.outputur.value=int_zero(10*u*.889)/10,t.outputnpt.value=int_zero(10*u*1.125)/10,t.outputplt.value=int_zero(10*u*.067)/10,t.outputj2.value=int_zero(100*u*.1264)/100,t.outputj3.value=int_zero(100*u*.13358)/100,t.outputj4.value=int_zero(100*u*.1448)/100,t.outputj5.value=int_zero(100*u*.18355)/100,t.outputsun.value=int_zero(10*u*27.072)/10,t.outputwd.value=int_zero(10*u*13e5)/10,t.outputns.value=14e10*u)
-    }
-      
-    function int_zero(t)
-    {
-      return 1>t?0:parseInt(t,10)
-    }
-
-    </script> 
-
+  <!-- The script where the weight is computed --> 
 </head>
 
-<body>
+<body onload="checkLogIn()">
   <div id="main">
     <div id="header" >
       <div id="logo" >
@@ -58,7 +44,8 @@
           <li><a href="funFacts.html">Fun Facts</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="login.html">LogIn</a></li>
+          <li class="logIn"><a href="login.html">LogIn</a></li>
+          <li class="logOut" onclick="logout()"><a href="#">LogOut</a></li>
         </ul>
       </div>
     </div>
@@ -181,35 +168,8 @@
         </p>
         <p></p>
       </div>
-    </div>
-    
+    </div> 
   </div>
-
-  <script language="javascript">//add logout button if necessary
-    if(typeof(Storage)!=="undefined" && ((localStorage.lastname==="EmilChirila") || ((localStorage.lastname==="OvidiuCodila")))  )
-    {
-      //alert("LogOut button is being created!");
-      var btn = document.createElement("BUTTON"); //create button
-      var t = document.createTextNode("Log Out");//set the text of the button
-      btn.appendChild(t);//append to this button the text property
-      document.body.appendChild(btn);//append this button to the main body
-      btn.className = "logOutButton";//define the class of the button
-      btn.onclick = function() { //define what will happen if button is clicked
-        if (confirm("You will be Logged Out? Press OK if you want to continue")) 
-        {
-          localStorage.lastname="loggedOut";
-          window.location.href = 'index.html';
-        } 
-        else 
-        {
-          //do nothing if Cancel is pressed
-        }
-        //alert("Welcome " + localStorage.lastname + "!");
-      }
-
-      //alert("LogOut button created!");
-    }
-</script>
 
 </body>
 </html>

@@ -12,14 +12,14 @@ html
     background-color: rgb(1, 3, 5);
     border: none;
     color: white;   
-    padding: 1px 5px;
+    left: 5px;
     font-size: 20px;
     cursor: pointer;
     top: 20%;
     left: 20%;
 }
 
-.logOutButton { /*style proprieties for the logout button */
+/*.logOutButton { /*style proprieties for the logout button
     background-color: #000000;
 	color: #ffffff;
     border: none;
@@ -37,12 +37,12 @@ html
     left: 72.3%;
 }
 
-.logOutButton:hover /*what to happen when you put your mouse over it */
+.logOutButton:hover /*what to happen when you put your mouse over it
 {
 	background-color: rgb(238, 241, 238);
 	color: rgb(0, 0, 0);
   text-decoration: none;
-}
+}*/
 
 .subtext
 {
@@ -166,7 +166,7 @@ ol li
 ul#menu, ul#menu li /*align the menu to make all the options stay on the same row */
 { float: left;
   margin: 0; 
-  padding: 0;}
+  padding: 2px;}
 
 ul#menu li a /* gives the special fonts and style for the menu */
 { letter-spacing: 0.1em;
@@ -337,4 +337,18 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.logIn {
+  display: none;
+}
+
+.logOut {
+  padding: 0px 2px;
+  right: 75px;
+  display: none;
+
+  background-color: rgb(1, 3, 5);
+  border: none;
+  color: white;
 }
