@@ -1,0 +1,121 @@
+<?php include('server.php') ?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Space Explorer</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
+  <link rel="Tab icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/logInOutMainButtons.js"></script>
+
+  
+</head>
+
+<body> <!-- onload="checkLogIn()" -->
+  <!-- <button class="logOutButton" onclick="logOut()" >Log Out</button>  -->
+  <?php
+    if(isset($_POST['succes']))
+    {
+        echo '<style type="text/css">
+            .logIn {
+                display: none;
+            }
+            .logOut {
+                display: block;
+            }
+            </style>';
+    }
+    else
+    {
+        echo '<style type="text/css">
+            .logIn {
+                display: block;
+            }
+            .logOut {
+                display: none;
+            }
+            </style>';
+    }
+    ?>
+
+  <div id="main">
+    <div id="header" >
+      <div id="logo" >
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><span class="logo_colour">Space Explorer</span></h1>
+          <h2><span class="subtext">EXPLORE IT LIKE NEVER BEFORE!</span></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li>
+            <button class="btn">
+              <a href="index.html"><i class="fa fa-home"></i> </a>
+            </button></li>
+          <li><a href="enterPage.html">Home</a></li>
+          <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
+                <div class="dropdown-content">
+                  <a href="#">Full Package</a>
+                  <a href="spaceShipRezerv.html">Space Ship Only</a>
+                  <a href="#">Another Tab</a>
+                </div>
+          </li>
+          <li><a href="funFacts.html">Fun Facts</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="logIn"><a href="login.php">LogIn</a></li>
+          <li class="logOut" name="logout" method="post" action="enterPage.php"><a href="#">LogOut</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- here we have our sidebar :) -->
+        
+        <h3>Here is some text</h3>
+        <h4>This will be a sidebar</h4>
+        <h5>July 1st, 2014</h5>
+        <p>Text for news<br /><a href="#">Read more</a></p>
+        <p></p>
+        <h4>And here we will have some news</h4>
+        <h5>July 1st, 2014</h5>
+        <p>Text for news<br /><a href="#">Read more</a></p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="styleMainPages/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Here is going to be the main information for the site!</h1>
+        <p>BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</p>
+        <p>BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 </p>
+        <p>Link to the gitbub :) <a href="https://github.com/EmilCreatePro/Space-Travel-And-Reservations---WebProject">here</a>.</p>
+        <p>\ <STRONG>DO YOU PLAN A FUNERAL? COME HERE THEN:  </STRONG><a href="https://www.afternic.com/forsale/morgue.com?utm_source=TDFS&utm_medium=sn_affiliate_click&utm_campaign=TDFS_Affiliate_namefind_direct1&traffic_type=CL3&traffic_id=Namefind">morgue</a> you have nothing to lose :)</p>
+        <h2>Browser Compatibility</h2>
+        <p>We want to make it work for:</p>
+        <ul>
+          <li>Internet Explorer 9</li>
+          <li>FireFox 25</li>
+          <li>Google Chrome 31</li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+
+</body>
+</html>

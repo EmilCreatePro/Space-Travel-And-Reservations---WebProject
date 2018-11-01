@@ -18,12 +18,12 @@
 			<div>Are you an <span>Admin</span>?</div>
 		</div>
 		<br>
-		<form name="login">
+		<form name="login" action="login.html" method="post">
 			<div class="login">
 					<input type="text" placeholder="User" name="userid"><br>
 					<input type="password" placeholder="Password" name="pswrd"><br>
-					<input type="button" onclick="check(this.form)" value="Login"/><br>
-					<input type="button" onclick="exitLogIn()" value="Exit"/>
+					<input type="submit" value="Login" name="login"/><br>
+					<input type="button" value="Exit" name="exit"/>
 			</div>
 		</form>
 
