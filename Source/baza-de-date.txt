@@ -53,10 +53,15 @@ id   NrCamera   idHotel(optional)
 Client
 id nume mail nrTelefon nrCard cnp idCalatorie idCamera
 1
-2                                      20        62  (idHotel - nrCamera)
+2                                      1        62  (idHotel - nrCamera)
 3
 4
 5
+
+
+
+RezervariCalatorii
+id idCalatorie Data
 
 
 

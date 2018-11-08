@@ -4,17 +4,17 @@
 
 <head>
   <title>Space Explorer</title>
+
+  
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
   <link rel="Tab icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/logInOutMainButtons.js"></script>
-
-  
 </head>
 
-<body> <!-- onload="checkLogIn()" -->
-  <!-- <button class="logOutButton" onclick="logOut()" >Log Out</button>  -->
+<body>
+
   <?php
     if(isset($_SESSION['username']))
     {
@@ -45,7 +45,7 @@
             </style>';
     }
     ?>
-
+    
   <div id="main">
     <div id="header" >
       <div id="logo" >
@@ -112,21 +112,30 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Here is going to be the main information for the site!</h1>
-        <p>BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</p>
-        <p>BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 </p>
-        <p>Link to the gitbub :) <a href="https://github.com/EmilCreatePro/Space-Travel-And-Reservations---WebProject">here</a>.</p>
-        <p>\ <STRONG>DO YOU PLAN A FUNERAL? COME HERE THEN:  </STRONG><a href="https://www.afternic.com/forsale/morgue.com?utm_source=TDFS&utm_medium=sn_affiliate_click&utm_campaign=TDFS_Affiliate_namefind_direct1&traffic_type=CL3&traffic_id=Namefind">morgue</a> you have nothing to lose :)</p>
-        <h2>Browser Compatibility</h2>
-        <p>We want to make it work for:</p>
-        <ul>
-          <li>Internet Explorer 9</li>
-          <li>FireFox 25</li>
-          <li>Google Chrome 31</li>
-        </ul>
-      </div>
-    </div> 
-  </div>
+        <h1>Examples of things this site will have</h1>
 
+        <h2>Tables</h2>
+        <p>We'll include this somehow to showcase some data :)</p>
+        <table style="width:100%; border-spacing:0;">
+          <tr><th>Item</th><th>Description</th></tr>
+          <tr><td>Item 1</td><td>Description of Item 1</td></tr>
+          <tr><td>Item 2</td><td>Description of Item 2</td></tr>
+          <tr><td>Item 3</td><td>Description of Item 3</td></tr>
+          <tr><td>Item 4</td><td>Description of Item 4</td></tr>
+        </table>
+        <h2>Form Elements</h2>
+        <form action="#" method="post">
+          <div class="form_settings">
+            <p><span>Form field example</span><input type="text" name="name" value="" /></p>
+            <p><span>Textarea example</span><textarea rows="8" cols="50" name="name"></textarea></p>
+            <p><span>Checkbox example</span><input class="checkbox" type="checkbox" name="name" value="" /></p>
+            <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>

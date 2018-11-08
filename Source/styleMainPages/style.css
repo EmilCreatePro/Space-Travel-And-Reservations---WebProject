@@ -19,31 +19,6 @@ html
     left: 20%;
 }
 
-/*.logOutButton { /*style proprieties for the logout button
-    background-color: #000000;
-	color: #ffffff;
-    border: none;
-    font-weight: bold;
-    padding: 5px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position:absolute;
-    transition: .5s ease;
-    top: 24%;
-    left: 72.3%;
-}
-
-.logOutButton:hover /*what to happen when you put your mouse over it
-{
-	background-color: rgb(238, 241, 238);
-	color: rgb(0, 0, 0);
-  text-decoration: none;
-}*/
-
 .subtext
 {
     color: rgb(241, 241, 241);
@@ -343,12 +318,31 @@ li.dropdown {
   display: none;
 }
 
-.logOut {
-  padding: 0px 2px;
-  right: 75px;
-  display: none;
+.logoutDiv input[type=submit]{
+  width: 150px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
 
-  background-color: rgb(1, 3, 5);
-  border: none;
-  color: white;
+.logoutDiv input[type=submit]:hover{
+  opacity: 0.8;
+}
+
+.logoutDiv input[type=submit]:active{
+  opacity: 0.6;
+}
+
+.logoutForm {
+  position: absolute;
+  top: 8%;
+  left: 112%;
 }

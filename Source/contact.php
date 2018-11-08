@@ -4,17 +4,17 @@
 
 <head>
   <title>Space Explorer</title>
+
+  
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="styleMainPages/style.css" title="style" />
   <link rel="Tab icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/logInOutMainButtons.js"></script>
-
-  
 </head>
 
-<body> <!-- onload="checkLogIn()" -->
-  <!-- <button class="logOutButton" onclick="logOut()" >Log Out</button>  -->
+<body>
+
   <?php
     if(isset($_SESSION['username']))
     {
@@ -85,6 +85,7 @@
     </div>
     <div id="site_content">
       <div class="sidebar">
+        <!-- insert your sidebar items here -->
         <!-- here we have our sidebar :) -->
         
         <h3>Here is some text</h3>
@@ -112,21 +113,20 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Here is going to be the main information for the site!</h1>
-        <p>BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA</p>
-        <p>BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 BLA2 </p>
-        <p>Link to the gitbub :) <a href="https://github.com/EmilCreatePro/Space-Travel-And-Reservations---WebProject">here</a>.</p>
-        <p>\ <STRONG>DO YOU PLAN A FUNERAL? COME HERE THEN:  </STRONG><a href="https://www.afternic.com/forsale/morgue.com?utm_source=TDFS&utm_medium=sn_affiliate_click&utm_campaign=TDFS_Affiliate_namefind_direct1&traffic_type=CL3&traffic_id=Namefind">morgue</a> you have nothing to lose :)</p>
-        <h2>Browser Compatibility</h2>
-        <p>We want to make it work for:</p>
-        <ul>
-          <li>Internet Explorer 9</li>
-          <li>FireFox 25</li>
-          <li>Google Chrome 31</li>
-        </ul>
+        <h1>Contact Us</h1>
+        <p>Below is an example of how a contact form might look with this template:</p>
+        <form action="#" method="post">
+          <div class="form_settings">
+            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
+            <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+          </div>
+        </form>
+        <p><br /><br />NOTE: A contact form such as this would require some way of emailing the input to an email address.</p>
       </div>
-    </div> 
+    </div>
   </div>
-
+  
 </body>
 </html>
