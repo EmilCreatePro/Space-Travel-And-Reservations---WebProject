@@ -1,3 +1,52 @@
+<?php
+//code that will most likely be used
+
+if(isset($_POST['your_name']) && isset($_POST['your_email']) && isset($_POST['your_enquiry']))
+{
+  $name = $_POST['your_name'];
+  $email = $_POST['your_email'];
+  $to1 = 'emilchirila97@gmail.com';
+  $to2 = 'ovidiu.codila@gmail.com';
+  $subject = "Feedback from Client";
+  $body = $_POST['your_enquiry'];
+
+  //headers -> nush exact de ce am nevoie de astea dar cica sunt importante
+  $headers = "From: ".$name." <".$email.">\r\n";
+  $headers = "Reply-To ".$email."\r\n";
+  $headers = "MINE-Version: 1.0\r\n";
+  $headers = "Content-type: text/html; charset-utf-8";
+
+  //amu sa trimitem mailul
+
+  $send = mail($to1, $subject, $body, $headers);//trimite la 'emilchirila97@gmail.com'
+
+  if($send)
+  {
+    echo "Thank you for your input! We will respond to your feedback as soon as posible!";
+  }
+  else
+  echo "Error when sending mail!";
+}
+else
+{
+  //aici ar trebui sa fie ceva mesaj in care sa spuna ca trebuie completate campurile...
+}
+
+$send = mail($to2, $subject, $body, $headers);//trimite la 'ovidiu.codila@gmail.com'
+
+  if($send)
+  {
+    //echo "Thank you for your input! We will respond to your feedback as soon as posible!"; -> nu mai zicem asta inca o data
+  }
+  else
+  echo "Error when sending mail!";
+}
+else
+{
+  //aici ar trebui sa fie ceva mesaj in care sa spuna ca trebuie completate campurile...
+}
+?>
+
 <?php include('server.php') ?>
 <!DOCTYPE HTML>
 <html>
@@ -80,6 +129,7 @@
           <li><a href="about.php">About Us</a></li>
           <li class="logIn"><a href="login.php">LogIn</a></li>
           <li class="logOut"><a href="#">History</a></li>
+          <li class="sendMail"><a href="testMail.php">Send Mail</a></li>
         </ul>
       </div>
     </div>
