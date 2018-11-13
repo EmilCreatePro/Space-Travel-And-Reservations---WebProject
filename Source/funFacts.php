@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>black_white - another page</title>
+  <title>Space Explorer</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -74,9 +74,9 @@
           <li><a href="enterPage.php">Home</a></li>
           <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
                 <div class="dropdown-content">
-                  <a href="#">Full Package</a>
+                  <a href="fullPackRezerv.php">Full Package</a>
                   <a href="spaceShipRezerv.php">Space Ship Only</a>
-                  <a href="#">Another Tab</a>
+                  <a href="hotelsPage.php">Hotels</a>
                 </div>
           </li>
           <li><a href="funFacts.php">Fun Facts</a></li>
@@ -89,29 +89,37 @@
     </div>
     <div id="site_content">
       <div class="sidebar">
-        <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
-        <h4>New Website Launched</h4>
-        <h5>July 1st, 2014</h5>
-        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
-        <p></p>
-        <h4>New Website Launched</h4>
-        <h5>July 1st, 2014</h5>
-        <p>2014 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <!-- here we have our sidebar :) -->
+        
+        <h3>News and Articles</h3>
+        <div class="news">
+          <h4>Tesla reaching new Hights!</h4>
+          <img src = "./img/teslaSpace.png" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.space.com/42337-spacex-tesla-roadster-starman-beyond-mars.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New planets in our vecinity!<br />
+          <img src = "./img/planetSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.independent.co.uk/news/science/exoplanets-latest-new-infant-planets-found-scientists-astronomy-a8397001.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New hotels soon!<br />
+          <img src = "./img/hotelSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="#">Check it out!</a>
+        </div>
+
         <h3>Useful Links</h3>
         <ul>
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">link 2</a></li>
-          <li><a href="#">link 3</a></li>
-          <li><a href="#">link 4</a></li>
+          <li><a href="https://www.youtube.com/">Youtube</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://9gag.com/">9GAG</a></li>
+          <li><a href="https://www.reddit.com/">Reddit</a></li>
         </ul>
-        <h3>Search</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="styleMainPages/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
       </div>
       <div id="content">
       

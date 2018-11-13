@@ -70,9 +70,9 @@
           <li><a href="enterPage.php">Home</a></li>
           <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
                 <div class="dropdown-content">
-                  <a href="#">Full Package</a>
+                  <a href="fullPackRezerv.php">Full Package</a>
                   <a href="spaceShipRezerv.php">Space Ship Only</a>
-                  <a href="#">Another Tab</a>
+                  <a href="hotelsPage.php">Hotels</a>
                 </div>
           </li>
           <li><a href="funFacts.php">Fun Facts</a></li>
@@ -87,52 +87,50 @@
       <div class="sidebar">
         <!-- here we have our sidebar :) -->
         
-        <h3>Here is some text</h3>
-        <h4>This will be a sidebar</h4>
-        <h5>July 1st, 2014</h5>
-        <p>Text for news<br /><a href="#">Read more</a></p>
-        <p></p>
-        <h4>And here we will have some news</h4>
-        <h5>July 1st, 2014</h5>
-        <p>Text for news<br /><a href="#">Read more</a></p>
+        <h3>News and Articles</h3>
+        <div class="news">
+          <h4>Tesla reaching new Hights!</h4>
+          <img src = "./img/teslaSpace.png" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.space.com/42337-spacex-tesla-roadster-starman-beyond-mars.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New planets in our vecinity!<br />
+          <img src = "./img/planetSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.independent.co.uk/news/science/exoplanets-latest-new-infant-planets-found-scientists-astronomy-a8397001.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New hotels soon!<br />
+          <img src = "./img/hotelSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="#">Check it out!</a>
+        </div>
+
         <h3>Useful Links</h3>
         <ul>
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">link 2</a></li>
-          <li><a href="#">link 3</a></li>
-          <li><a href="#">link 4</a></li>
+          <li><a href="https://www.youtube.com/">Youtube</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://9gag.com/">9GAG</a></li>
+          <li><a href="https://www.reddit.com/">Reddit</a></li>
         </ul>
-        <h3>Search</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="styleMainPages/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Examples of things this site will have</h1>
+        <h1>About us..</h1>
 
-        <h2>Tables</h2>
-        <p>We'll include this somehow to showcase some data :)</p>
+        <h2>Founders</h2>
         <table style="width:100%; border-spacing:0;">
-          <tr><th>Item</th><th>Description</th></tr>
-          <tr><td>Item 1</td><td>Description of Item 1</td></tr>
-          <tr><td>Item 2</td><td>Description of Item 2</td></tr>
-          <tr><td>Item 3</td><td>Description of Item 3</td></tr>
-          <tr><td>Item 4</td><td>Description of Item 4</td></tr>
+          <tr><th>Name</th><th>Position</th></tr>
+          <tr><td>Chirila Emil</td><td>CEO</td></tr>
+          <tr><td>Codila Ovidiu</td><td>CEO</td></tr>
         </table>
-        <h2>Form Elements</h2>
-        <form action="#" method="post">
-          <div class="form_settings">
-            <p><span>Form field example</span><input type="text" name="name" value="" /></p>
-            <p><span>Textarea example</span><textarea rows="8" cols="50" name="name"></textarea></p>
-            <p><span>Checkbox example</span><input class="checkbox" type="checkbox" name="name" value="" /></p>
-            <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
-          </div>
-        </form>
+
+        <p>Two partners with a small business wanting to go big. And we did. With founds from different organizations and other sources of income we started this project
+        with a big desire to explore the space and to let others enjoy it too. We started from the bottom and now we are to the top...literally to the top. And we aint
+        going to stop here! </p>
       </div>
     </div>
   </div>

@@ -1638,8 +1638,8 @@ span.flatpickr-weekday {
 }
 
 .s002 form .inner-form .input-field.fouth-wrap {
-  min-width: 190px;
-  max-width: 190px;
+  min-width: 150px;
+  max-width: 150px;
   border-right: 0;
 }
 
@@ -1716,8 +1716,8 @@ span.flatpickr-weekday {
 }
 
 .s002 form .inner-form .input-field.fifth-wrap {
-  min-width: 190px;
-  max-width: 190px;
+  min-width: 150px;
+  max-width: 150px;
   padding-left: 10px;
   border-right: 0;
 }
@@ -1825,15 +1825,18 @@ span.flatpickr-weekday {
     background-color: #45a049;
 }
 
-  .error {
-    width: 92%;
+  div.error {
+    position: absolute;
+    top: 18%;
+    left: 15%;
+    width: 70%;
     margin: 0px auto;
-    padding: 10px;
+    padding: 0px;
     border: 1px solid #a94442;
     color: #a94442;
     background: #f2dede;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
   }
 
 @media screen and (max-width: 767px) {

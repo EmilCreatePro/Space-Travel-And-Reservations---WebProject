@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+
+body{
+	margin: 0;
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: url("../img/bg-image5.jpg");
+  	background-size: cover;
+  	background-position: center center;
+	-webkit-filter: blur(0px);
+	
+}
+
+.main-history{
+	position: absolute;
+	top: 20%;
+	left: 8%;
+	display: block;
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+}
+
+.main-history input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 50px;
+}
+
+.main-history input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.main-history input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.main-history input[type=text]{
+	width: 250px;
+	height: 30px;
+	opacity: 0.8;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.main-history input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+.main-content {
+	position: absolute;
+	width: 70%;
+	top: 20%;
+	left: 35%;
+	background: transparent;
+	color: white;
+}

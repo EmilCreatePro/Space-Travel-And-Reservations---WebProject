@@ -12,7 +12,7 @@
 
 </head>
 
-<body oncontextmenu="return false">
+<body>
   <div class="body"></div>
 		<div class="grad"></div>
 		<div class="header">
@@ -26,6 +26,8 @@
 					<input type="submit" value="Login" name="login"/><br>
 					<input type="submit" value="Exit" name="exit"/>
 			</div>
+
+			<?php include('errors.php'); ?>
 		</form>
 
 	<div id="notes">

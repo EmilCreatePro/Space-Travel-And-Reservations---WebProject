@@ -72,9 +72,9 @@
           <li><a href="enterPage.php">Home</a></li>
           <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Tickets</a>
                 <div class="dropdown-content">
-                  <a href="#">Full Package</a>
+                  <a href="fullPackRezerv.php">Full Package</a>
                   <a href="spaceShipRezerv.php">Space Ship Only</a>
-                  <a href="#">Another Tab</a>
+                  <a href="hotelsPage.php">Hotels</a>
                 </div>
           </li>
           <li><a href="funFacts.php">Fun Facts</a></li>
@@ -88,48 +88,53 @@
     </div>
     <div id="site_content">
       <div class="sidebar">
-        <!-- insert your sidebar items here -->
         <!-- here we have our sidebar :) -->
         
-        <h3>Here is some text</h3>
-        <h4>This will be a sidebar</h4>
-        <h5>July 1st, 2014</h5>
-        <p>Text for news<br /><a href="#">Read more</a></p>
-        <p></p>
-        <h4>And here we will have some news</h4>
-        <h5>July 1st, 2014</h5>
-        <p>Text for news<br /><a href="#">Read more</a></p>
+        <h3>News and Articles</h3>
+        <div class="news">
+          <h4>Tesla reaching new Hights!</h4>
+          <img src = "./img/teslaSpace.png" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.space.com/42337-spacex-tesla-roadster-starman-beyond-mars.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New planets in our vecinity!<br />
+          <img src = "./img/planetSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="https://www.independent.co.uk/news/science/exoplanets-latest-new-infant-planets-found-scientists-astronomy-a8397001.html">Check it out!</a>
+        </div>
+
+        <div class="news">
+          <h4>New hotels soon!<br />
+          <img src = "./img/hotelSp.jpg" height = "60" width = "120"></img>
+          <br>
+          <a href="#">Check it out!</a>
+        </div>
+
         <h3>Useful Links</h3>
         <ul>
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">link 2</a></li>
-          <li><a href="#">link 3</a></li>
-          <li><a href="#">link 4</a></li>
+          <li><a href="https://www.youtube.com/">Youtube</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://9gag.com/">9GAG</a></li>
+          <li><a href="https://www.reddit.com/">Reddit</a></li>
         </ul>
-        <h3>Search</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="styleMainPages/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
       </div>
       <div id="content">
         <!-- insert the page content here -->
+        <div class="someText">
         <h1>Contact Us</h1>
-        <p>Below is an example of how a contact form might look with this template:</p>
-        <form action="" method="post">
-          <div class="form_settings">
-            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-            <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-            <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><button class="submit" type="submit" name="contact_submitted" value="Submit">Submit!</button></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><button class="submit" type="submit" name="send" value="Send now!">Send now!<a href="testMail.php"></a></button></p>
-          
-          </div>
-        </form>
-        <!--<p><br /><br />NOTE: A contact form such as this would require some way of emailing the input to an email address.</p>-->
-        <br />
+        <h3>For rezervations you can: </h3>
+        <p> - email: space.explorer@gmail.com </p>
+        <p> - phone: +40771820435 </p>
+        <a href="fullPackRezerv.php"> - or do it yourself online </a>
+
+        <h3>For complaints and other messages: </h3>
+        <p> - email: space.complaints@gmail.com </p>
+        <p> - phone: +40744448751 </p>
+
+        <h3> Thankyou for Choosing us! </h4>
+        </div>
         <?php
           //code that will most likely be used
 

@@ -20,7 +20,6 @@
 }
 
 
-
 .header{
 	position: absolute;
 	top: calc(50% - 35px);
@@ -121,3 +120,17 @@
 ::-moz-input-placeholder{
    color: rgba(255,255,255,0.6);
 }
+
+div.error {
+    position: absolute;
+    top: 18%;
+    left: 15%;
+    width: 70%;
+    margin: 0px auto;
+    padding: 0px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: center;
+  }

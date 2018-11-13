@@ -1,11 +1,11 @@
 <?php include('server.php') ?>
-<?php include('makeSpaceShipRezerv.php') ?>
+<?php include('makeFullPackRezerv.php') ?>
 
 <!DOCTYPE HTML>
 <html>
 
   <head>
-    <title>Rezerve Flight</title>
+    <title>Rezerve Trip</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,58 +15,29 @@
   </head>
 
   <body>
-    <?php
-      if(isset($_SESSION['searchSucces']) && $_SESSION['searchSucces'] > 0)
+    <?php      
+      if(isset($_SESSION['fullPackSucces']))
       {
-        // daca am gasit macar o varianta afisam formu de rezervare si tinem in checkboxuri id-urile calatoriilor
         echo '<style type="text/css">
             .rezervOpt {
               display: inline-block;
             }
             </style>';
-        $idCalatorie1 = $_SESSION['idC1'];
-        $idCalatorie2 = $_SESSION['idC2'];
-        // in text retinem datele despre variantele de calatorie gasite pentru cautarea curenta
-        $text1 = $_SESSION['var1'];
-        $text2 = $_SESSION['var2'];
-
-        $_SESSION['searchSucces'] = 0;
       }
       else
       {
-        // daca nu, nu afisam formu
         echo '<style type="text/css">
             .rezervOpt {
               display: none;
             }
             </style>';
       }
-
-      if(empty($text1))
-      {
-        //daca prima optiune e goala nu afisam niciun checkbox pt ca inseamna ca nu exista nico varianta
-        echo '<style type="text/css">
-            .rezervOpt input[type=checkbox] {
-              display: none;
-              }
-              </style>';
-      }
-
-      if(empty($text2))
-      {
-        // daca a 2a e goala nu afisam a 2lea check box ca inseamna ca exista doar o singura varianta
-        echo '<style type="text/css">
-            #myCheck2 {
-              display: none;
-              }
-              </style>';
-      }
     ?>
 
     <div class="s002">
-      <form action="spaceShipRezerv.php" method="post">
+      <form action="fullPackRezerv.php" method="post">
         <fieldset>
-          <legend>SEARCH SPACE SHIP</legend>
+          <legend>SEARCH FULL TRIP</legend>
         </fieldset>
         <div class="inner-form">
           <div class="input-field first-wrap">
@@ -91,7 +62,15 @@
                 <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
               </svg>
             </div>
-            <input class="datepicker" id="return" type="text" placeholder="Choose Date" name="date"/>
+            <input class="datepicker" id="return" type="text" placeholder="Arrive Date" name="dateA"/>
+          </div>
+          <div class="input-field third-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+            <input class="datepicker" id="return" type="text" placeholder="Leave Date" name="dateL"/>
           </div>
           <div class="input-field fouth-wrap">
             <div class="icon-wrap">
@@ -100,14 +79,14 @@
               </svg>
             </div>
             <select data-trigger="" name="choices-single-defaul">
-              <option placeholder="">1 Seat</option>
-              <option>2 Seats</option>
-              <option>3 Seats</option>
-              <option>4 Seats</option>
+              <option placeholder="">1 Place</option>
+              <option>2 Places</option>
+              <option>3 Places</option>
+              <option>4 Places</option>
             </select>
           </div>
           <div class="input-field fifth-wrap">
-            <button class="btn-search" type="submit" name="searchTripBtn" value="SearchTripBtn">SEARCH</button>
+            <button class="btn-search" type="submit" name="searchFullBtn" value="SearchFullBtn">SEARCH</button>
           </div>
         </div>
 
@@ -116,12 +95,12 @@
         <div class="rezervOpt">
         <form>
           <br><br>
-          <input type="checkbox" name="option1" id="myCheck1" onclick="checkboxFct(1)" value="<?php echo $idCalatorie1 ?>"> <?php echo $text1 ?> <br><br>
-          <input type="checkbox" name="option2" id="myCheck2" onclick="checkboxFct(2)" value="<?php echo $idCalatorie2 ?>"> <?php echo $text2 ?> <br>
+          
+          <?php include('options.php'); ?>
 
           <br><br><br>
       
-          <label for="fname">Full Name</label>
+          <label for="fname">First Name</label>
           <input type="text" id="fname" name="fullname" placeholder="Your full name..">
 
           <label for="email">Email Address</label>
@@ -136,7 +115,7 @@
           <label for="cnp">CNP</label>
           <input type="text" id="cnp" name="cnp" placeholder="Your CNP..">
 
-          <input type="submit" value="rezerv" name="rezervTripBtn">
+          <input type="submit" value="rezerv" name="rezervFullBtn">
 
         </form>
       </div>
@@ -160,15 +139,26 @@
     </script>
 
     <script>
-        function checkboxFct(x)
+        function hotelBoxFct(id)
         {
-          var checkBox1 = document.getElementById("myCheck1");
-          var checkBox2 = document.getElementById("myCheck2");
+          var hotelsOpt = document.getElementsByClassName("hotel");
+          for(var i=1; i<= hotelsOpt.length; i++)
+            document.getElementById(""+i).checked = false;
+          document.getElementById(""+id).checked = true;
+        }
 
-          if(x == 1)
-            checkBox2.checked = false;
-          if(x == 2)
-            checkBox1.checked = false;
+        function tripBoxFct(id)
+        {
+          var hotelsOpt = document.getElementsByClassName("hotel");
+          var tripsOpt = document.getElementsByClassName("trip");
+
+          //alert("" + hotelsOpt.length + " " + tripsOpt.length);
+
+          var startPoint = hotelsOpt.length+1;
+          var endPoint = tripsOpt.length+hotelsOpt.length;
+          for(var i= startPoint; i<= endPoint; i++)
+            document.getElementById(""+i).checked = false;
+          document.getElementById(""+id).checked = true;
         }
     </script>
   </body>
