@@ -9,31 +9,49 @@
 
 		if(mysqli_num_rows($resultCl) > 0)
 		{
+
 			while($rowCl = mysqli_fetch_assoc($resultCl))
 			{
-				$output = $rowCl['name'] . " - " . $rowCl['cnp'] . " - " . $rowCl['email'] . " - " . $rowCl['phone'];
+				if($rowCl['idcamera'] == 0)
+				{
+					$output = "<td>" . $rowCl['name'] . "</td><td>" . $rowCl['cnp'] . "</td><td>" . $rowCl['email'] . "</td><td>" . $rowCl['phone'];
 
-				$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
-				$resultTrip = mysqli_query($db, $queryTrip);
-				$rowTrip = mysqli_fetch_assoc($resultTrip);
-				$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " . $rowTrip['departure'] . " > " . $rowTrip['arrival'] . " at " . $rowTrip['orad'];
-
-				$queryRzv = "SELECT * FROM rezervaricalatorie WHERE idclient=$rowCl[id] AND idcalatorie=$rowCl[idcalatorie]";
-				$resultRzv = mysqli_query($db, $queryRzv);
-				$rowRzv = mysqli_fetch_assoc($resultRzv);
-				$output .= " on " . $rowRzv['data'] . " for " . $rowRzv['locurirezerv'] . " persons";
+					$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
+					$resultTrip = mysqli_query($db, $queryTrip);
+					$rowTrip = mysqli_fetch_assoc($resultTrip);
+					//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " . $rowTrip['departure'] . " > " . $rowTrip['arrival'] . " at " . $rowTrip['orad'];
+					$output .= "</td><td>" . $rowTrip['departure'] . "</td><td>" . $rowTrip['arrival'] . "</td><td>" . $rowTrip['orad'];
+					$queryRzv = "SELECT * FROM rezervaricalatorie WHERE idclient=$rowCl[id] AND idcalatorie=$rowCl[idcalatorie]";
+					$resultRzv = mysqli_query($db, $queryRzv);
+					$rowRzv = mysqli_fetch_assoc($resultRzv);
+					$output .= "</td><td>" . $rowRzv['data'] . "</td><td>" . $rowRzv['locurirezerv'] . "</td>";
+					$output .= "</td><td>N/A</td><td>N/A</td>";
+				}
 
 				if($rowCl['idcamera'] != 0)
 				{
+					$output = "<td>" . $rowCl['name'] . "</td><td>" . $rowCl['cnp'] . "</td><td>" . $rowCl['email'] . "</td><td>" . $rowCl['phone'];
+
+					$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
+					$resultTrip = mysqli_query($db, $queryTrip);
+					$rowTrip = mysqli_fetch_assoc($resultTrip);
+					//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " . $rowTrip['departure'] . " > " . $rowTrip['arrival'] . " at " . $rowTrip['orad'];
+					$output .= "</td><td>" . $rowTrip['departure'] . "</td><td>" . $rowTrip['arrival'] . "</td><td>" . $rowTrip['orad'];
+					$queryRzv = "SELECT * FROM rezervaricalatorie WHERE idclient=$rowCl[id] AND idcalatorie=$rowCl[idcalatorie]";
+					$resultRzv = mysqli_query($db, $queryRzv);
+					$rowRzv = mysqli_fetch_assoc($resultRzv);
+					$output .= "</td><td>" . $rowRzv['data'] . "</td><td>" . $rowRzv['locurirezerv'] . "</td>";
+
 					$queryHotel = "SELECT * FROM hoteluri WHERE id = $rowCl[idcamera]";
 					$resultHotel = mysqli_query($db, $queryHotel);
 					$rowHotel = mysqli_fetch_assoc($resultHotel);
-					$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - at hotel " . $rowHotel['nume'];
-
+					//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - at hotel " . $rowHotel['nume'];
+					$output .= "</td><td>" . $rowHotel['nume'] . "</td>"; 
 					$queryRzvH = "SELECT * FROM rezervarihotel WHERE idclient=$rowCl[id] AND idhotel=$rowCl[idcamera]";
 					$resultRzvH = mysqli_query($db, $queryRzvH);
 					$rowRzvH = mysqli_fetch_assoc($resultRzvH);
-					$output .= " until " . $rowRzvH['dataout'] . "<br>";
+					//$output .= " until " . $rowRzvH['dataout'] . "<br>";
+					$output .= "<td>". $rowRzvH['dataout'] . "</td>";
 				}
 
 				array_push($clients, $output);
@@ -60,6 +78,7 @@
 			{
 				while($rowCl = mysqli_fetch_assoc($resultCl))
 				{
+					/*
 					$output = $rowCl['name'] . " - " . $rowCl['cnp'] . " - " . $rowCl['email'] . " - " . $rowCl['phone'];
 
 					$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
@@ -84,7 +103,49 @@
 						$rowRzvH = mysqli_fetch_assoc($resultRzvH);
 						$output .= " until " . $rowRzvH['dataout'] . "<br>";
 					}
+					*/
 
+					if($rowCl['idcamera'] == 0)
+					{
+						$output = "<td>" . $rowCl['name'] . "</td><td>" . $rowCl['cnp'] . "</td><td>" . $rowCl['email'] . "</td><td>" . $rowCl['phone'];
+
+						$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
+						$resultTrip = mysqli_query($db, $queryTrip);
+						$rowTrip = mysqli_fetch_assoc($resultTrip);
+						//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " . $rowTrip['departure'] . " > " . $rowTrip['arrival'] . " at " . $rowTrip['orad'];
+						$output .= "</td><td>" . $rowTrip['departure'] . "</td><td>" . $rowTrip['arrival'] . "</td><td>" . $rowTrip['orad'];
+						$queryRzv = "SELECT * FROM rezervaricalatorie WHERE idclient=$rowCl[id] AND idcalatorie=$rowCl[idcalatorie]";
+						$resultRzv = mysqli_query($db, $queryRzv);
+						$rowRzv = mysqli_fetch_assoc($resultRzv);
+						$output .= "</td><td>" . $rowRzv['data'] . "</td><td>" . $rowRzv['locurirezerv'] . "</td>";
+						$output .= "</td><td>N/A</td><td>N/A</td>";
+					}
+
+					if($rowCl['idcamera'] != 0)
+					{
+						$output = "<td>" . $rowCl['name'] . "</td><td>" . $rowCl['cnp'] . "</td><td>" . $rowCl['email'] . "</td><td>" . $rowCl['phone'];
+
+						$queryTrip = "SELECT * FROM calatorie WHERE id = $rowCl[idcalatorie]";
+						$resultTrip = mysqli_query($db, $queryTrip);
+						$rowTrip = mysqli_fetch_assoc($resultTrip);
+						//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - " . $rowTrip['departure'] . " > " . $rowTrip['arrival'] . " at " . $rowTrip['orad'];
+						$output .= "</td><td>" . $rowTrip['departure'] . "</td><td>" . $rowTrip['arrival'] . "</td><td>" . $rowTrip['orad'];
+						$queryRzv = "SELECT * FROM rezervaricalatorie WHERE idclient=$rowCl[id] AND idcalatorie=$rowCl[idcalatorie]";
+						$resultRzv = mysqli_query($db, $queryRzv);
+						$rowRzv = mysqli_fetch_assoc($resultRzv);
+						$output .= "</td><td>" . $rowRzv['data'] . "</td><td>" . $rowRzv['locurirezerv'] . "</td>";
+
+						$queryHotel = "SELECT * FROM hoteluri WHERE id = $rowCl[idcamera]";
+						$resultHotel = mysqli_query($db, $queryHotel);
+						$rowHotel = mysqli_fetch_assoc($resultHotel);
+						//$output .= "<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - at hotel " . $rowHotel['nume'];
+						$output .= "</td><td>" . $rowHotel['nume'] . "</td>"; 
+						$queryRzvH = "SELECT * FROM rezervarihotel WHERE idclient=$rowCl[id] AND idhotel=$rowCl[idcamera]";
+						$resultRzvH = mysqli_query($db, $queryRzvH);
+						$rowRzvH = mysqli_fetch_assoc($resultRzvH);
+						//$output .= " until " . $rowRzvH['dataout'] . "<br>";
+						$output .= "<td>". $rowRzvH['dataout'] . "</td>";
+					}
 					array_push($clients, $output);
 				}
 			}
@@ -98,8 +159,5 @@
 	{
 		header('location: enterPage.php');
 	}
-
-
-
 
 ?>

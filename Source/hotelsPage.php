@@ -37,22 +37,24 @@
   	</head>
 
   	<body>
-
-  		<div class="main-content">
+	  
+  		<div class="main-content" >
   			<?php if(count($hotelsName) > 0)
   					{ for($x=0; $x<count($hotelsName); $x++) 
 	  					{ ?>
-  						<div class="hotel">
-  							<img src="<?php echo $hotelsImg[$x]; ?>" height="200" width="200"></img>
-  							<p><?php echo "Name: " . $hotelsName[$x]; ?></p>
-  							<p><?php echo "Stars: " . $hotelsStars[$x]; ?></p>
-  							<p><?php echo "Rooms: " . $hotelsRooms[$x]; ?></p>
+  						<div class="hotel" id="white_bck">
+  							<img src="<?php echo $hotelsImg[$x]; ?>" height="200" width="200" />
+                <ul>
+  							 <li><?php echo "Name: " . $hotelsName[$x]; ?></li><br>
+  							 <li><?php echo "Stars: " . $hotelsStars[$x]; ?></li><br>
+  							 <li><?php echo "Rooms: " . $hotelsRooms[$x]; ?></li><br>
+                </ul>
   						</div>
   				<?php 	}
   					}
   			?>
   		</div>
-
+	
   	</body>
 
 

@@ -4,9 +4,9 @@
 
 
 body{
+	/*
 	margin: 0;
-    position: fixed; 
-    overflow-y: scroll;
+    position: absolute; 
     width: 100%;
 	top: -20px;
 	left: -20px;
@@ -14,11 +14,29 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background: url("../img/bg-image5.jpg");
-  	background-size: cover;
+	background: url("../img/bg-image5.jpg"); 
   	background-position: center center;
 	-webkit-filter: blur(0px);
+	*/
+	background-image: url("../img/bg-image5.jpg");
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 	
+	
+}
+
+.backImg
+{
+	background-image: url("../img/bg-image5.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 ::-webkit-input-placeholder{
@@ -33,16 +51,34 @@ body{
 	position: absolute;
 	height: auto;
 	width: 70%;
-	top: 30%;
+	top: 5%;
 	left: 20%;
 	background: transparent;
-	display: inline-block;
-	color: white;
+	display: block;
+	color: black;
 }
 
 .hotel {
 	display: inline-block;
+	/*display: block;*/
+	border: 2px solid rgb(0, 0, 0); 
 	position: relative;
-	padding: 5px;
-	margin: 3px;
+	padding: 30px 00px 120px 30px;
+	/*margin: 3px;*/
+	margin:0 0 50px 0;
+}
+
+.hotel ul {
+	display: inline-block;
+	position: absolute;
+}
+
+#white_bck /* this handles the site content so it's more badass :) */
+{ 
+  width: 854px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 20px 10px 20px 20px;
+  background: #FFF;
+  opacity: 0.8;
 }
