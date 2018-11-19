@@ -2,7 +2,7 @@
 
 ## Authors: *Chirila and Codila*
 
-A complex site using javascript and node.js.
+A complex site using PHP and HTML.
 
 
 You can found this site [here](http://wait.com/).
